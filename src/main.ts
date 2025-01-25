@@ -16,6 +16,8 @@ async function bootstrap() {
   app.use(cors());
   app.use(helmet());
   app.enableCors();
+  app.setGlobalPrefix('api');
+
   // app.setGlobalPrefix("bot/api/v1");
   await app.listen(process.env.PORT || 3000);
   console.log(`Application is running on: ${await app.getUrl()}`);
