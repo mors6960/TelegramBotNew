@@ -19,5 +19,6 @@ async function bootstrap() {
   // app.setGlobalPrefix("bot/api/v1");
   await app.listen(process.env.PORT || 3000);
   console.log(`Application is running on: ${await app.getUrl()}`);
+}if (require.main === module) {
+  bootstrap();
 }
-bootstrap();

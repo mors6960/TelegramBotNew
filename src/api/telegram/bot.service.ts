@@ -48,8 +48,8 @@ export class BotService {
 
         const description =
           'Dive into an exciting journey where each tap brings you closer to earning in-game coins and Shido tokens! \nProgress through challenging levels and watch your earnings grow. \nUp for the challenge? Begin tapping and unleashing your inner Shido Ninja!';
-        const webAppUrl = process.env.WEB_APP_URL + msg.from?.id;
-        // const webAppUrl = process.env.WEB_APP_URL;
+        // const webAppUrl = process.env.WEB_APP_URL + msg.from?.id;
+        const webAppUrl = process.env.WEB_APP_URL;
         console.log(
           '%csrc/api/telegram/bot.service.ts:54 webAppUrl',
           'color: #007acc;',
@@ -162,7 +162,8 @@ export class BotService {
     const title = 'Welcome to Shido Ninja!';
     const description =
       'Dive into an exciting journey where each tap brings you closer to earning in-game coins and Shido tokens! \nProgress through challenging levels and watch your earnings grow. \nUp for the challenge? Begin tapping and unleashing your inner Shido Ninja!';
-    const webAppUrl = `${process.env.WEB_APP_URL}${userId}&chatId=${chatId}`;
+    // const webAppUrl = `${process.env.WEB_APP_URL}${userId}&chatId=${chatId}`;
+    const webAppUrl = `${process.env.WEB_APP_URL}`
     const messageOptions = {
       reply_markup: {
         inline_keyboard: [[{ text: 'Play Game', web_app: { url: webAppUrl } }]],
